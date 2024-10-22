@@ -1,0 +1,200 @@
+@charset 'utf-8';
+
+.wrap {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    margin: 0 auto;
+    background: $light-gray;
+    overflow: hidden;
+
+    .contents {
+        position: relative;
+        width: 100%;
+
+        .title {
+            position: relative;
+            width: 100%;
+            padding-top: 20px;
+
+            h1 {
+                font-size: 0;
+                background: url(../images/logo.png) no-repeat center;
+                width: 160px;
+                height: 48px;
+                background-size: contain;
+                text-align: center;
+                margin: 0 auto 10px;
+            }
+
+            h2 {
+                @include ftBold;
+                font-size: 30px;
+                line-height: 1.4;
+                text-align: center;
+                margin: 0 auto;
+
+                span {
+                    @include ftBlack;
+                    font-size: 32px;
+                    color: $main-color;
+                    background: $gradient-color;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        .main_form {
+            position: relative;
+            width: 94%;
+            margin: 20px auto;
+            padding: 30px 20px;
+            background: $white;
+            border-radius: 30px;
+            box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+
+            h3 {
+                @include ftBold;
+                font-size: 24px;
+                text-align: center;
+                color: $font-main-color;
+                margin-bottom: 20px;
+            }
+
+            .input_box {
+                @include flex(center, space-between);
+                @include input(90%, 40px, 2px);
+
+                & + .input_box {
+                    margin-top: 15px;
+                }
+
+                label {
+                    width: 80px;
+                }
+                
+                >div {
+                    width: 90%;
+                    @include flex(center, space-between);
+                    @include input(50%, 40px, 2px);
+                    span {
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            .submit_btn {
+                margin-top: 30px;
+                @include button(100%, 50px, 40px);
+            }
+        }
+
+        .sub_sc {
+            position: relative;
+            padding: 30px 20px;
+            margin: 0 auto;
+            background: $white;
+            text-align: center;
+
+            h5 {
+                @include ftBlack;
+                font-size: 34px;
+                color: $main-color;
+                background: $gradient-color;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 38px;
+                span {
+                    font-size: 30px;
+                    color: $font-main-color;
+                    background: $font-main-color;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            div {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                margin: 20px auto 0;
+                padding: 10px 0;
+                border-radius: 25px;
+                background: $gradient-color;
+                @include flex(center, center);
+                & + div {
+                    margin-top: 14px;
+                }
+
+                p {
+                    @include ftRegular;
+                    font-size: 16px;
+                    color: $white;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background: url(../images/ico_check_circle.svg) no-repeat center;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                strong {
+                    @include ftBlack;
+                    font-size: 26px;
+                    color: $point-color;
+                    margin-left: 10px;
+                }
+            }
+
+            ul {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                margin: 20px auto 0;
+                padding: 10px 0;
+                border: 1px solid $font-main-color;
+
+                li {
+                    @include ftRegular;
+                    font-size: 16px;
+                    color: $font-main-color;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        width: 100%;
+        padding: 15px 20px;
+        background: #222222;
+
+        p {
+            @include ftRegular;
+            font-size: 12px;
+            line-height: 18px;
+            color: $light-gray;
+
+            a {
+                @include ftRegular;
+                font-size: 12px;
+                line-height: 18px;
+                color: $light-gray;
+            }
+
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}

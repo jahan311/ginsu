@@ -1,0 +1,527 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------------------------------------------------
+    Explain : 지앤파트너
+    File : common.scss
+    Date   : 2024.10.22
+    Ver 1.0.0
+/*------------------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* reset */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+em {
+  font-style: normal;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+  margin: 0 auto;
+  background: #eeeeee;
+  overflow: hidden;
+}
+.wrap .contents {
+  position: relative;
+  width: 100%;
+}
+.wrap .contents .title {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+}
+.wrap .contents .title h1 {
+  font-size: 0;
+  background: url(../images/logo.png) no-repeat center;
+  width: 160px;
+  height: 48px;
+  background-size: contain;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+.wrap .contents .title h2 {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+}
+.wrap .contents .title h2 span {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  font-size: 32px;
+  color: #f27a1f;
+  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap .contents .main_form {
+  position: relative;
+  width: 94%;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.wrap .contents .main_form h3 {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.wrap .contents .main_form .input_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+.wrap .contents .main_form .input_box input {
+  width: 90%;
+  height: 40px;
+  border-radius: 2px;
+  padding: 8px 18px;
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #222222;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.wrap .contents .main_form .input_box input:-moz-read-only {
+  color: #222222;
+  border: 1px solid #f27a1f;
+  background: #f5f2f6;
+  cursor: default;
+}
+.wrap .contents .main_form .input_box input:read-only {
+  color: #222222;
+  border: 1px solid #f27a1f;
+  background: #f5f2f6;
+  cursor: default;
+}
+.wrap .contents .main_form .input_box input::-webkit-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box input::-moz-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box input:-ms-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box input::-ms-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box input::placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box input:focus {
+  border: 1px solid #f27a1f;
+}
+.wrap .contents .main_form .input_box input:disabled {
+  background: #eceff1;
+  border: 1px solid #d6d6d6;
+}
+.wrap .contents .main_form .input_box input:disabled::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box input:disabled::-moz-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box input:disabled:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box input:disabled::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box input:disabled::placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box label {
+  position: relative;
+  cursor: pointer;
+  color: #222222;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 15px;
+}
+.wrap .contents .main_form .input_box + .input_box {
+  margin-top: 15px;
+}
+.wrap .contents .main_form .input_box label {
+  width: 80px;
+}
+.wrap .contents .main_form .input_box > div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+.wrap .contents .main_form .input_box > div input {
+  width: 50%;
+  height: 40px;
+  border-radius: 2px;
+  padding: 8px 18px;
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #222222;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.wrap .contents .main_form .input_box > div input:-moz-read-only {
+  color: #222222;
+  border: 1px solid #f27a1f;
+  background: #f5f2f6;
+  cursor: default;
+}
+.wrap .contents .main_form .input_box > div input:read-only {
+  color: #222222;
+  border: 1px solid #f27a1f;
+  background: #f5f2f6;
+  cursor: default;
+}
+.wrap .contents .main_form .input_box > div input::-webkit-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box > div input::-moz-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box > div input:-ms-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box > div input::-ms-input-placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box > div input::placeholder {
+  color: #666666;
+}
+.wrap .contents .main_form .input_box > div input:focus {
+  border: 1px solid #f27a1f;
+}
+.wrap .contents .main_form .input_box > div input:disabled {
+  background: #eceff1;
+  border: 1px solid #d6d6d6;
+}
+.wrap .contents .main_form .input_box > div input:disabled::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box > div input:disabled::-moz-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box > div input:disabled:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box > div input:disabled::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box > div input:disabled::placeholder {
+  color: #c4c4c4;
+}
+.wrap .contents .main_form .input_box > div label {
+  position: relative;
+  cursor: pointer;
+  color: #222222;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 15px;
+}
+.wrap .contents .main_form .input_box > div span {
+  margin: 0 10px;
+}
+.wrap .contents .main_form .submit_btn {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  color: #ffffff;
+  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 16px;
+}
+.wrap .contents .main_form .submit_btn:hover {
+  color: #ffffff;
+  border: 1px solid #f27a1f;
+  background: #f27a1f;
+}
+.wrap .contents .main_form .submit_btn:disabled {
+  color: #c4c4c4;
+  background: #eceff1;
+}
+.wrap .contents .main_form .submit_btn:disabled:hover {
+  border: none;
+}
+.wrap .contents .sub_sc {
+  position: relative;
+  padding: 30px 20px;
+  margin: 0 auto;
+  background: #ffffff;
+  text-align: center;
+}
+.wrap .contents .sub_sc h5 {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  font-size: 34px;
+  color: #f27a1f;
+  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 38px;
+}
+.wrap .contents .sub_sc h5 span {
+  font-size: 30px;
+  color: #222222;
+  background: #222222;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap .contents .sub_sc div {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  border-radius: 25px;
+  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wrap .contents .sub_sc div + div {
+  margin-top: 14px;
+}
+.wrap .contents .sub_sc div p {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+}
+.wrap .contents .sub_sc div p::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/ico_check_circle.svg) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.wrap .contents .sub_sc div strong {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  font-size: 26px;
+  color: #fdea69;
+  margin-left: 10px;
+}
+.wrap .contents .sub_sc ul {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  border: 1px solid #222222;
+}
+.wrap .contents .sub_sc ul li {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 16px;
+  color: #222222;
+  padding: 10px 0;
+}
+.wrap .footer {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  background: #222222;
+}
+.wrap .footer p {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #eeeeee;
+}
+.wrap .footer p a {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #eeeeee;
+}
+.wrap .footer p:last-child {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 320px) {
+  .contents .sub_sc div p::before {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .contents .sub_sc div strong {
+    margin-left: 6px !important;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .contents .main_form .input_box {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: baseline !important;
+        -ms-flex-align: baseline !important;
+            align-items: baseline !important;
+    gap: 8px !important;
+  }
+  .contents .main_form .input_box input {
+    width: 100% !important;
+  }
+  .contents .main_form .input_box div {
+    width: 100% !important;
+  }
+  .contents .sub_sc {
+    padding: 30px 10px !important;
+  }
+  .contents .sub_sc div strong {
+    font-size: 20px !important;
+    margin-left: 4px !important;
+  }
+  .contents .sub_sc ul li {
+    font-size: 15px !important;
+  }
+}/*# sourceMappingURL=common.css.map */

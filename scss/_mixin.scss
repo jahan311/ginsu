@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+$white : #ffffff;
+$main-color : #f27a1f;
+$point-color : #fdea69;
+$light-gray : #eeeeee;
+$font-main-color : #222222;
+$border-color : #d6d6d6;
+$disabled-color : #eceff1;
+$disabled-font-color : #c4c4c4;
+$disabled-border-color : #c4c4c4;
+$placeholder-color : #666666;
+$readonly-color : #f5f2f6;
+$gradient-color : linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+
+@mixin ftRegular {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+}
+
+@mixin ftMedium {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+}
+
+@mixin ftBold {
+    font-family: "Noto Sans KR";
+    font-weight: 700;
+}
+
+@mixin ftBlack {
+    font-family: "Noto Sans KR";
+    font-weight: 900;
+}
+
+@mixin flex($align, $justify, $gap:0, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin input($width, $height, $radius) {
+    position: relative;
+    input {
+        width: $width;
+        height: $height;
+        border-radius: $radius;
+        padding: 8px 18px;
+        background: $white;
+        border: 1px solid $border-color;
+        @include ftRegular;
+        color: $font-main-color;
+        font-size: 14px;
+        transition: all 0.2s ease-in-out;
+
+        &:read-only {
+            color: $font-main-color;
+            border: 1px solid $main-color;
+            background: $readonly-color;
+            cursor: default;
+        }
+
+        &::placeholder {
+            color: $placeholder-color;
+        }
+
+        &:focus {
+            border: 1px solid $main-color;
+        }
+
+        &:disabled {
+            background: $disabled-color;
+            border: 1px solid $border-color;
+
+            &::placeholder {
+                color: $disabled-font-color;
+            }
+        }
+    }
+    label {
+        position: relative;
+        cursor: pointer;
+        color: $font-main-color;
+        @include ftMedium;
+        font-size: 15px;
+    }
+}
+
+@mixin button($width, $height, $radius) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    color: $white;
+    background: $gradient-color;
+    @include ftMedium;
+    font-size: 16px;
+
+    &:hover {
+        color: $white;
+        border: 1px solid $main-color;
+        background: $main-color;
+    }
+
+    &:disabled {
+        color: $disabled-font-color;
+        background: $disabled-color;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
