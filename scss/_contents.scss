@@ -39,9 +39,6 @@
                     @include ftBlack;
                     font-size: 32px;
                     color: $main-color;
-                    background: $gradient-color;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                 }
             }
         }

@@ -108,7 +108,7 @@ em {
   max-width: 768px;
   height: auto;
   margin: 0 auto;
-  background: #eeeeee;
+  background: #f0f0f0;
   overflow: hidden;
 }
 .wrap .contents {
@@ -142,9 +142,6 @@ em {
   font-weight: 900;
   font-size: 32px;
   color: #f27a1f;
-  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .wrap .contents .main_form {
   position: relative;
@@ -475,14 +472,14 @@ em {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #eeeeee;
+  color: #f0f0f0;
 }
 .wrap .footer p a {
   font-family: "Noto Sans KR";
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #eeeeee;
+  color: #f0f0f0;
 }
 .wrap .footer p:last-child {
   margin-top: 20px;
