@@ -158,10 +158,14 @@
                 max-width: 500px;
                 margin: 20px auto 0;
                 padding: 10px 0;
-                border: 1px solid $font-main-color;
+                background: $white;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                border: 1px solid rgba($border-color,0.5);
+    
 
                 li {
-                    @include ftRegular;
+                    @include ftMedium;
                     font-size: 16px;
                     color: $font-main-color;
                     padding: 10px 0;

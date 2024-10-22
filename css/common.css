@@ -352,16 +352,11 @@ em {
   width: 100%;
   height: 50px;
   border-radius: 40px;
-  color: #ffffff;
-  background: linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
+  color: #222222;
+  background: #FFD400;
   font-family: "Noto Sans KR";
-  font-weight: 500;
-  font-size: 16px;
-}
-.wrap .contents .main_form .submit_btn:hover {
-  color: #ffffff;
-  border: 1px solid #f27a1f;
-  background: #f27a1f;
+  font-weight: 700;
+  font-size: 20px;
 }
 .wrap .contents .main_form .submit_btn:disabled {
   color: #c4c4c4;
@@ -452,11 +447,15 @@ em {
   max-width: 500px;
   margin: 20px auto 0;
   padding: 10px 0;
-  border: 1px solid #222222;
+  background: #ffffff;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border: 1px solid rgba(214, 214, 214, 0.5);
 }
 .wrap .contents .sub_sc ul li {
   font-family: "Noto Sans KR";
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   color: #222222;
   padding: 10px 0;

@@ -92,16 +92,16 @@ $gradient-color : linear-gradient(160deg, #F27A1F 0%, #F15723 100%);
     width: $width;
     height: $height;
     border-radius: $radius;
-    color: $white;
-    background: $gradient-color;
-    @include ftMedium;
-    font-size: 16px;
+    color: $font-main-color;
+    background: #FFD400;
+    @include ftBold;
+    font-size: 20px;
 
-    &:hover {
-        color: $white;
-        border: 1px solid $main-color;
-        background: $main-color;
-    }
+    // &:hover {
+    //     color: $white;
+    //     border: 1px solid $main-color;
+    //     background: $main-color;
+    // }
 
     &:disabled {
         color: $disabled-font-color;
