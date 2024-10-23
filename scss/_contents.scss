@@ -92,7 +92,7 @@
             position: relative;
             padding: 30px 20px;
             margin: 0 auto;
-            background: $white;
+            background: rgba(#FFD400, 0.1);
             text-align: center;
 
             h5 {
@@ -160,7 +160,7 @@
                 padding: 10px 0;
                 background: $white;
                 border-radius: 20px;
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                box-shadow: rgba($main-color, 0.15) 0px 5px 15px 0px;
                 border: 1px solid rgba($border-color,0.5);
     
 
